@@ -162,4 +162,4 @@ MentionsTextInput.defaultProps = {
   maxLength: null,
 };
 
-export default class MentionsTextInput;
+export default MentionsTextInput;
