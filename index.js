@@ -9,7 +9,12 @@ import {
   ListView
 } from 'react-native';
 
-class MentionsTextInput extends Component {
+export default class MentionsTextInput extends Component {
+
+  static defaultProps = {
+    maxLength: null,
+  }
+
   constructor() {
     super();
     this.state = {
@@ -131,9 +136,3 @@ class MentionsTextInput extends Component {
     )
   }
 }
-
-MentionsTextInput.defaultProps = {
-  maxLength: null,
-};
-
-export default MentionsTextInput;
