@@ -133,13 +133,6 @@ class MentionsTextInput extends Component {
 }
 
 MentionsTextInput.defaultProps = {
-  placeholder: 'Write a comment...',
-  textInputMinHeight: 35,
-  textInputMaxHeight: 85,
-  returnKeyType: 'send',
-  trigger: '@',
-  triggerLocation: 'new-word-only',
-  suggestionsPanelHeight: 45,
   maxLength: null,
 };
 
