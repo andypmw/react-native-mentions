@@ -9,7 +9,7 @@ import {
   ListView
 } from 'react-native';
 
-export default class MentionsTextInput extends Component {
+export class MentionsTextInput extends Component {
 
   static defaultProps = {
     maxLength: null,
