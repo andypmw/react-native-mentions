@@ -30,6 +30,7 @@ import {MentionsTextInput} from 'react-native-mentions';
  suggestionsDataSource={this.state.ds}
  triggerCallback={this.callback.bind(this)}
  onKeyPress={(e) => { e.nativeEvent.key == "Enter" ? console.log("ENTER") : false } } 
+ maxLength={400} // max character length for TextInput
 />
 ```
 

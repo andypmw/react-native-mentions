@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -9,7 +9,7 @@ import {
   ListView
 } from 'react-native';
 
-export class MentionsTextInput extends Component {
+class MentionsTextInput extends Component {
   constructor() {
     super();
     this.state = {
@@ -125,8 +125,41 @@ export class MentionsTextInput extends Component {
           value={this.props.value}
           style={[{ ...this.props.textInputStyle }, { height: Math.min(this.props.textInputMaxHeight, this.state.textInputHeight) }]}
           placeholder={this.props.placeholder ? this.props.placeholder : 'Write a comment...'}
+          maxLength={this.props.maxLength}
           />
       </View>
     )
   }
 }
+
+MentionsTextInput.propTypes = {
+  placeholder: PropTypes.string,
+  textInputStyle: PropTypes.object,
+  textInputMinHeight: PropTypes.number,
+  textInputMaxHeight: PropTypes.number,
+  returnKeyType: PropTypes.number,
+  trigger: PropTypes.string,
+  triggerLocation: PropTypes.oneOf(['new-word-only', 'anywhere']),
+  value: PropTypes.string,
+  onChangeText: PropTypes.func,
+  suggestionsPanelHeight: PropTypes.number,
+  renderSuggestionsRow: PropTypes.func,
+  suggestionsPanelStyle: PropTypes.object,
+  suggestionsDataSource: PropTypes.array,
+  triggerCallback: PropTypes.func,
+  onKeyPress: PropTypes.func,
+  maxLength: PropTypes.number,
+};
+
+MentionsTextInput.defaultProps = {
+  placeholder: 'Write a comment...',
+  textInputMinHeight: 35,
+  textInputMaxHeight: 85,
+  returnKeyType: 'send',
+  trigger: '@',
+  triggerLocation: 'new-word-only',
+  suggestionsPanelHeight: 45,
+  maxLength: null,
+};
+
+export default class MentionsTextInput;
