@@ -132,25 +132,6 @@ class MentionsTextInput extends Component {
   }
 }
 
-MentionsTextInput.propTypes = {
-  placeholder: PropTypes.string,
-  textInputStyle: PropTypes.object,
-  textInputMinHeight: PropTypes.number,
-  textInputMaxHeight: PropTypes.number,
-  returnKeyType: PropTypes.number,
-  trigger: PropTypes.string,
-  triggerLocation: PropTypes.oneOf(['new-word-only', 'anywhere']),
-  value: PropTypes.string,
-  onChangeText: PropTypes.func,
-  suggestionsPanelHeight: PropTypes.number,
-  renderSuggestionsRow: PropTypes.func,
-  suggestionsPanelStyle: PropTypes.object,
-  suggestionsDataSource: PropTypes.array,
-  triggerCallback: PropTypes.func,
-  onKeyPress: PropTypes.func,
-  maxLength: PropTypes.number,
-};
-
 MentionsTextInput.defaultProps = {
   placeholder: 'Write a comment...',
   textInputMinHeight: 35,
